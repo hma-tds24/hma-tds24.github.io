@@ -50,10 +50,9 @@
 
 <script type="text/javascript">
 	console.log(Math.random())
-
-	function move (){
-	let x = Math.random()*800+"px"=x
-}
+let x;
+function move (){
+	// x= Math.random()*800+"px"
 
 happy.style.left = Math.random()*800+"px";
 happy.style.top = Math.random()*800+"px";
@@ -64,24 +63,22 @@ happy.style.top = Math.random()*800+"px";
 	
 
 
-	let counter=0;
-function makeGobbles(){
-	counter=counter+1;
-	let gobbles=document.createElement("div")
-	document.body.appendChild(gobbles)
-	gobbles.classList.add("turkey")
-	gobbles.innerText = counter}
+// 	let counter=0;
+	
+// function makeGobbles(){
+// 	counter=counter+1;
+// 	let gobbles=document.createElement("div")
+// 	document.body.appendChild(gobbles)
+// 	gobbles.classList.add("turkey")
+// 	gobbles.innerText = counter
+// }
 	
 	
+
+
+// setInterval(makeGobbles, 750)
 		
-
-
-
-
-
-setInterval(makeGobbles, 750)
-		
-		setInterval(colorchange,300)
+// 		setInterval(colorchange,300)
 
 setInterval(move,300)
 
