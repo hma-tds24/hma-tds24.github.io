@@ -1,32 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
 	<title></title>
 	<style type="text/css">
+
+
 		.turkey{
+			z-index: 0;
 			height:100px;
 			width:100px;
 			background-size:contain;
 			display:inline-block;
-			background-image:url(https://content.presentermedia.com/content/animsp/00033000/33229/turkey_ready_to_eat_md_nwm_v2.gif);
-		}
+			background-image:url( https://content.presentermedia.com/content/animsp/00033000/33229/turkey_ready_to_eat_md_nwm_v2.gif);}
+
+			#happy{
+
+				height:230px;
+				width:230px;
+				border-radius:50%;
+				background-color:yellow ;
+				position:absolute;
+				z-index: 10;
+				transition:0.3s;
+				background-image:url( https://i.pinimg.com/originals/c2/74/60/c274608842b91edb838f5f3576a0c91d.gif);
+				background-size:contain
+				
+			}
+			#sign{
+				height:300px;
+				width: 85%;
+				z-index:100;
+				background-image:url(sign.png);
+				background-size:contain;
+
+			}
+
+		
 
 	</style>
+
 </head>
 <body>
-
+	
+	<center>
+	<div id="happy"></div>
+	<div id="sign"></div>
+	</center>
 
 <script type="text/javascript">
+	console.log(Math.random())
+
+	function move (){
+	let x = Math.random()*800+"px"=x
+}
+
+happy.style.left = Math.random()*800+"px";
+happy.style.top = Math.random()*800+"px";
+}
+
+
+
+	
+
+
+	let counter=0;
 function makeGobbles(){
+	counter=counter+1;
 	let gobbles=document.createElement("div")
 	document.body.appendChild(gobbles)
 	gobbles.classList.add("turkey")
+	gobbles.innerText = counter}
+	
+	
+		
 
-}
 
-setInterval(makeGobbles ,1000)
+
+
+
+setInterval(makeGobbles, 750)
+		
+		setInterval(colorchange,300)
+
+setInterval(move,300)
+
 
 </script>
 </body>
