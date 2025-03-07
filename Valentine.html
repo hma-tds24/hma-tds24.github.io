@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.confetti{
+			height: 20px;
+			width: 20px;
+			border: solid black;
+			margin:2px;
+			position:absolute;
+			transition: .1s;
+		}
+		#envelope{
+			height:200px ;
+			width: 300px;			
+			background-image: url(heartbox.png);
+			background-size: contain;
+			z-index: 10px;
+			position:absolute;
+			left:40%;
+			font-size:40px;
+
+
+			top:35%;
+
+		}
+			/*.boxes{
+			display:inline-block;
+			border:2px solid black;
+			width: 300px;
+			height: 300px;
+			margin: 4px;
+			background:no-repeat;
+			opacity:0;
+
+		}*/
+			#button{
+				height: 50px;
+				width:50px;
+				border: 2px solid black;
+				background-image:url( );
+
+
+			}
+			
+		
+
+		body{
+			margin:0px;
+			background-color: lightpink;
+		}
+
+		#porch{
+			Width:100%;
+			height:600px;
+			background-size:contain;
+			background-image:url(https://img.freepik.com/premium-vector/door-welcome-mat-entrance-doormat-carpet-sweet-home-inscription-vector-front-door-mat-cartoon-rug-laying-wood-floor-porch-entryway-near-closed-brown-door-doorstep-old-brick-walls_8071-56213.jpg);
+			display: inline-block;
+
+		}
+		
+		.dog{
+			width:100px;
+			height:100px;
+			border:1px solid black;
+			display:inline-block;
+			background-size:contain;
+
+		}
+
+	
+
+
+		
+	</style>
+</head>
+<body>	
+	<!-- <div class="boxes" id="box1"></div>
+	<div class="boxes" id="box2"></div>
+	<div class="boxes" id="box3"></div>
+	<div class="dog"></div> -->
+	<div id="wall"></div>
+	<center><div id="envelope">Open Me!</div></center>
+	<script type="text/javascript">
+
+
+
+		function makeFleetwood(placeholder){
+			
+
+
+			let fleetwood=document.createElement("div")
+			document.body.appendChild(fleetwood)
+			fleetwood.classList.add("dog")
+			fleetwood.style.backgroundImage = "url("+placeholder +".png)"
+			fleetwood.style.opacity="0"
+			
+
+		}
+
+	for(let i=0;i<5;i=i+1){
+				makeFleetwood(i) }
+
+		let x = 0
+		function makeConfetti(){
+
+			let sprinkle=document.createElement("div")
+			document.body.appendChild(sprinkle)
+			sprinkle.classList.add("confetti")
+			sprinkle.style.top= Math.random()*100+"px"
+				sprinkle.style.left= Math.random()*1000+"px"
+
+				let r=Math.random()*255
+				let g=Math.random()*255
+				let b=Math.random()*255
+			sprinkle.style.backgroundColor = "rgb("+r+","+g+","+b+")"
+
+			
+			function fall(){
+			sprinkle.style.top = parseInt(sprinkle.style.top)+(Math.random()*100)+"px"}
+
+			setInterval(fall, 80)
+
+
+			} // end of the function
+
+
+		for(let i=0;i<100;i=i+1){
+				makeConfetti()
+				}
+				//for the function, make confetti, make it so that the number of confettis is 0 originally. Continuously add one to the number of confettis 'til #of confettis=1000
+
+
+	envelope.addEventListener("click", function(){
+
+		let dogs = Array.from(document.getElementsByClassName("dog")).forEach(function(element){
+			element.style.opacity="1"
+		})
+
+
+		// let random1 = 	Math.floor(Math.random()*colors.length)
+
+		// let random2 = 	Math.floor(Math.random()*colors.length)
+		// let random3 = 	Math.floor(Math.random()*colors.length)
+		// console.log(random1)	
+		// box1.style.backgroundColor = colors[random1]
+
+		// box2.style.backgroundColor = colors[random2]
+
+		// box3.style.backgroundColor = colors[random3]
+
+
+
+	}) //end of eventlistener//
+
+				
+	</script>
+
+
+
+
+</body>
+</html>

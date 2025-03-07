@@ -10,6 +10,7 @@
 			z-index: 0;
 			height:100px;
 			width:100px;
+			border: 1px solid black;
 			background-size:contain;
 			display:inline-block;
 			background-image:url( https://content.presentermedia.com/content/animsp/00033000/33229/turkey_ready_to_eat_md_nwm_v2.gif);}
@@ -23,6 +24,7 @@
 				position:absolute;
 				z-index: 10;
 				transition:0.3s;
+				border: 1px solid black;
 				background-image:url( https://i.pinimg.com/originals/c2/74/60/c274608842b91edb838f5f3576a0c91d.gif);
 				background-size:contain
 				
@@ -30,7 +32,8 @@
 			#sign{
 				height:300px;
 				width: 85%;
-				z-index:100;
+				position: absolute;
+				z-index:-10;
 				background-image:url(sign.png);
 				background-size:contain;
 
@@ -52,10 +55,10 @@
 	console.log(Math.random())
 let x;
 function move (){
-	// x= Math.random()*800+"px"
+	 x= Math.random()*800+"px"
 
 happy.style.left = Math.random()*800+"px";
-happy.style.top = Math.random()*800+"px";
+happy.style.top = Math.random()*400+"px";
 }
 
 
@@ -63,22 +66,22 @@ happy.style.top = Math.random()*800+"px";
 	
 
 
-// 	let counter=0;
+ 	let counter=0;
 	
-// function makeGobbles(){
-// 	counter=counter+1;
-// 	let gobbles=document.createElement("div")
-// 	document.body.appendChild(gobbles)
-// 	gobbles.classList.add("turkey")
-// 	gobbles.innerText = counter
-// }
+ function makeGobbles(){
+ 	counter=counter+1;
+ 	let gobbles=document.createElement("div")
+ 	document.body.appendChild(gobbles)
+ 	gobbles.classList.add("turkey")
+ 	gobbles.innerText = counter
+ }
 	
 	
 
 
-// setInterval(makeGobbles, 750)
+ setInterval(makeGobbles, 500)
 		
-// 		setInterval(colorchange,300)
+//		setInterval(colorchange,300)
 
 setInterval(move,300)
 

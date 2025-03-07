@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		
+		#hunter{
+			background-color:blue;
+			width:100px;
+			height:100px;
+		}
+	</style>
+</head>
+<body>
+
+		<audio id="lalasong" src="sound.m4a"></audio>
+
+
+	<div id="hunter"></div>
+
+	<script type="text/javascript">
+
+		hunter.style.backgroundColor="blue"
+		hunter.addEventListener("click", function(){
+
+			if(hunter.style.backgroundColor=="blue")
+			{
+				hunter.style.backgroundColor="red"
+				lalasong.play()
+			}
+
+			else if(hunter.style.backgroundColor=="red")
+			{
+				hunter.style.backgroundColor="blue"
+				lalasong.pause()
+			}
+
+		})
+	</script>
+
+</body>
+</html>
