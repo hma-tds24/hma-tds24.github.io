@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		#cheetah{ width:100px;
+			height:70px;
+			margin-top:0px;
+			background-image:url(https://news.cgtn.com/news/78637a4e3251444d7759444f3567444d31557a4e31457a6333566d54/img/efd368233637445391bc04444d92249e/efd368233637445391bc04444d92249e.jpg);
+			background-size: contain;
+			position: absolute;
+			z-index: 10px;
+			transition:3s;
+			left:0px;
+			position: relative;
+			}
+			.tracks{
+				margin-left:20%;
+				width:60%;
+				Height:220px;
+/*				margin-top:60px;*/
+				background-image:url(https://img.freepik.com/free-vector/top-view-race-car-track-with-start-finish-line-vector-cartoon-illustration-straight-road-auto-rally-competition-with-white-grid-pattern-marking-asphalt_107791-10370.jpg);
+				background-size:contain ;
+/*				position: absolute;*/
+				z-index: -1px;
+				background-size:contain;
+				background-repeat: no-repeat;
+color: white;
+			}
+			#track1{
+				margin-top:60px;
+			}
+			#current{
+				width:100px;
+			height:70px;
+			margin-top: 10px;
+				background-image: url(https://thumbs.dreamstime.com/b/ocean-wave-14582420.jpg);
+				transition:2.5s;
+				position: relative;
+				left: 0px;
+				background-size: contain;
+				color: white;
+			}
+			#sneeze{
+				background-image: url(snot.png);
+				height: 100px;
+				width: 100px;
+				background-size:contain;
+				background-repeat: no-repeat;
+				background-position: center;
+				transition: 2s;
+				position:relative;
+				left: 0px;
+				color: white;
+				}
+		
+	</style>
+</head>
+<body style="background-color: limegreen;">
+<button id="button1">Go!</button>
+<div class="tracks" id="track1">
+	The worlds fastest...
+		Cheetah<div id="cheetah"></div>
+</div>
+<div class="tracks" id="track2"><div id="sneeze">Sneeze</div></div>
+<div class="tracks" id="track3"><div id="current">OR  Ocean current</div></div>
+<script type="text/javascript">
+	button1.addEventListener("click", function(){
+		cheetah.style.left="700px"
+		sneeze.style.left="700px"
+		current.style.left="700px"
+		
+		// Redirect to Podium.html after 3.5 seconds
+		setTimeout(function(){
+			window.location.href = "podiumai.html";
+		}, 3500);
+	})
+	
+</script>
+</body>
+</html>

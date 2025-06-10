@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.confetti{
+			height: 20px;
+			width: 15px;
+			border: solid black;
+			margin:2px;
+			position:absolute;
+			transition: .1s;
+		}
+			
+		#podium{
+			margin-top:200px;
+			height:500px;
+			width:600px;
+			background-image: url(podium.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			padding: 50px 50px 0px 50px;
+		}
+		
+		body{
+			margin:0px;
+			background-color: lightblue;
+		}
+		
+		#sneeze{
+			background-image: url(snot.png);
+			height: 160px;
+			width: 160px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			transition: 2s;
+			position: relative;
+			color: white;
+			order: 2; /* First position (center/tallest) */
+		}
+		
+		#current{
+			width:200px;
+			height:170px;
+			background-image: url(https://cdn.hswstatic.com/gif/water-update.jpg);
+			transition:2.5s;
+			position: relative;
+			background-size: contain;
+			background-repeat: no-repeat;
+			color: white;
+			order: 1; /* Second position (left) */
+		}
+		
+		#cheetah{ 
+			width:200px;
+			height:170px;
+			background-image:url(cheetah.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			transition:3s;
+			position: relative;
+			order: 3; /* Third position (right) */
+		}
+	</style>
+</head>
+<body>	
+	<center>
+		<div id="podium">
+			<div id="sneeze"></div>
+			<div id="current"></div>
+			<div id="cheetah"></div>
+		</div>
+	</center>
+	<script type="text/javascript">
+		let x = 0
+		function makeConfetti(){
+			let sprinkle=document.createElement("div")
+			document.body.appendChild(sprinkle)
+			sprinkle.classList.add("confetti")
+			sprinkle.style.top= Math.random()*100+"px"
+			sprinkle.style.left= Math.random()*1500+"px"
+			let r=Math.random()*255
+			let g=Math.random()*255
+			let b=Math.random()*255
+			sprinkle.style.backgroundColor = "rgb("+r+","+g+","+b+")"
+			
+			function fall(){
+				sprinkle.style.top = parseInt(sprinkle.style.top)+(Math.random()*600)+"px"
+			}
+			setInterval(fall, 200)
+		}
+		
+		for(let i=0;i<2000;i=i+1){
+			makeConfetti()
+		}
+	</script>
+</body>
+</html>
